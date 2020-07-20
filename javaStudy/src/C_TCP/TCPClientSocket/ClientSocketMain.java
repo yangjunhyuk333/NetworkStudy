@@ -18,7 +18,7 @@ public class ClientSocketMain {
             OutputStream outputStream = socket.getOutputStream(); //서버 에 데이터 출력을 하기 위한 스트림 객체 생성
             PrintWriter out = new PrintWriter(outputStream, true); //서버 에 데이터 출력을 위한 PrintWriter 객체 생성
 
-            InputStream inputStream = socket.getInputStream(); //서버 에서 입력 한 스트림 객체 생성
+            InputStream inputStream = socket.getInputStream(); //서버 에서 입력 한 데이터 를 입력 받는 스트림 객체 생성
             BufferedReader in = new BufferedReader(new InputStreamReader(inputStream)); //서버 에서 들어온 입력을 받아 오기
                                                                                         //위한 BufferedReader 객체 생성
 
@@ -35,7 +35,7 @@ public class ClientSocketMain {
                 }
 
                 //클라이언트 가 입력 받기를 기다 린다.
-                System.out.println("client input data : ");
+                System.out.print("client input data : ");
 
                 //데이터 를 입력 받는다.
                 inputData = sc.nextLine();

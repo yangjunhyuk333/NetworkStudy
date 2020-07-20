@@ -22,7 +22,7 @@ public class ServerSocketMain {
             PrintWriter out = new PrintWriter(outputStream, true); // 클라이언트 에서 데이터 출력을 위한 객체 생성
             
             //입력을 위한 준비
-            InputStream input = socket.getInputStream(); //클라이언트 에서 입력 한 스트림 객체 생성
+            InputStream input = socket.getInputStream(); //클라이언트 에서 입력 한 데이터를 입력 받는 스트림 객체 생성
             BufferedReader in =  new BufferedReader(new InputStreamReader(input)); //클라이언트 에서 들어온 입력을 받아 오기
                                                                                     //위한 BufferedReader 객체 생성
             
@@ -32,7 +32,7 @@ public class ServerSocketMain {
             while (true){
                 System.out.print("server input data : "); 
                 String inputData = scanner.nextLine(); // 데이터 입력
-                out.println(inputData); //클라이언트 에 서버에서 입력한 데이터 출력
+                out.println(inputData); //클라이언트 에 서버 에서 입력한 데이터 출력
 
                 //클라이언트 에서 입력한 데이터 가 null 이 아니 라면
                 if ((inputData = in.readLine()) != null){

@@ -6,7 +6,6 @@ public class RunnableTest {
     public static void main(String[] args) {
         RunnableExample runnableExample = new RunnableExample();
 
-        runnableExample.printSleep();
-        runnableExample.run();
+        new Thread(runnableExample).start();
     }
 }

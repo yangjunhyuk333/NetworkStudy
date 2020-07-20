@@ -63,6 +63,9 @@ public class UDPFileSend {
 
                 //buff 의 크기 만큼 파일을 계속 읽어 오는 반복문 if readSize 가 -1이 되면 멈춘다.
                 while((readSize = fileInputStream.read(buff)) != -1){
+
+                    System.out.println("buff: " + fileInputStream.read(buff));
+
                     //10ms 딜레이
                     Thread.sleep(10);
 
